@@ -9,11 +9,19 @@
 </head>
 <body onresize="calcularAlturaLargura()">
 
+    <div class="painel">
+        <div class="vidas">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="Vida">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="Vida">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="Vida">
+        </div>
+        <div class="cronometro">Tempo restante: ?</div>
+    </div>
     
     <script>
         setInterval(function() {
             posicaoRandomica()
-        }, 1000)
+        }, 2000)
     </script>
 </body>
 </html>
