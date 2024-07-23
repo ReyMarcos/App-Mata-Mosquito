@@ -1,12 +1,42 @@
 var altura = 0
 var largura = 0
+var tempo = 15
+var vida = 1
+
+var criarMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'Normal'){
+    criarMosquitoTempo = 1500
+} else if (nivel === 'Dificil'){
+    criarMosquitoTempo = 1000
+} else if (nivel === 'JohnWick'){
+    criarMosquitoTempo = 750
+}
 
 altura = window.innerHeight
 largura = window.innerWidth
 
 //console.log(largura, altura)
 
-var vida = 1
+var cronometro = setInterval(function() {
+
+    tempo -= 1
+
+    if (tempo < 0){
+        clearInterval(cronometro)
+        clearInterval(criarMosquito)
+        window.location.href = 'vitoria.html'
+    } else {
+        document.getElementById('tempo').innerHTML = tempo
+    }
+
+
+}, 1000)
+
+
 
 function posicaoRandomica() {
 

@@ -15,13 +15,13 @@
             <img id="v2" src="imagens/coracao_cheio.png" alt="Vida">
             <img id="v1" src="imagens/coracao_cheio.png" alt="Vida">
         </div>
-        <div class="cronometro">Tempo restante: ?</div>
+        <div class="cronometro">Tempo restante: <span id="tempo">15</span></div>
     </div>
     
     <script>
-        setInterval(function() {
+        var criarMosquito = setInterval(function() {
             posicaoRandomica()
-        }, 2000)
+        }, criarMosquitoTempo)
     </script>
 </body>
 </html>
